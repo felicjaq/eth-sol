@@ -1,0 +1,183 @@
+.sites {
+    color: $color--black; 
+    padding-top: $base * 7;
+    padding-bottom: $base * 10;
+    overflow-x: hidden;
+
+    @media all and (min-width: 1200px){
+        padding-bottom: $base * 17;
+    }
+
+    &-title {
+        text-align: center;
+        font-family: $font--inter--bold;
+        font-size: $base * 5.5;
+        
+        & > h4 {
+            margin: $base * 5.5;
+
+            @media all and (min-width: 768px) {
+                margin: $base * 7.7;
+            }
+        }
+
+        &__site {
+            background: $color--main;
+            padding: $base * 1.5;
+            border-radius: $base * 2;
+            color: $color--text;
+        }
+
+        @media all and (min-width: 768px){
+            font-size: $base * 7;
+        }
+
+        @media all and (min-width: 1200px) {
+            font-size: $base * 7.5;
+        }
+    }
+
+    &-subtitle {
+        text-align: center;
+        font-family: $font--inter--medium;
+        font-size: $base * 3.5;
+
+        &__span {
+            border-bottom: $base * 0.5 solid $color--main;
+
+            @media all and (min-width: 1200px){
+                border-bottom: $base solid $color--main;
+            }
+        }
+
+        @media all and (min-width: 768px){
+            font-size: $base * 4.5;
+        }
+
+        @media all and (min-width: 1200px) {
+            font-size: $base * 5;
+        }
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: $base * 0.5 solid $color--black;
+        box-shadow: 0 0 $base * 4 $color--black;
+        position: relative;
+        width: 80%;
+        margin: $base * 10 auto 0 auto;
+
+        @media all and (min-width: 1200px) {
+            width: 30%;
+            margin: $base * 15 auto 0 auto;
+        }
+
+
+        &__img {
+            position: relative;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &--back {
+                position: absolute;
+                top: -$base * 0.5;
+            }
+
+            &--front {
+                position: relative;
+                width: $base * 13;
+                margin-top: $base * 1.5;
+            }
+        }
+
+        &__title {
+            font-family: $font--inter--semibold;
+            font-size: $base * 5;
+            margin-top: $base * 8;
+
+            @media all and (min-width: 1200px) {
+                font-size: $base * 5.5;
+            }
+
+            @media all and (min-width: 1400px) {
+                font-size: $base * 7.5;
+            }
+        }
+
+        &__price {
+            font-family: $font--inter--extrabold;
+            font-size: $base * 8;
+            margin-top: $base * 5;
+
+            @media all and (min-width: 1400px) {
+                font-size: $base * 10;
+            }
+        }
+
+        &__content {
+            margin-top: $base * 5;
+            color: $color--black;
+
+            @media all and (min-width: 1400px) {
+                padding: 0 $base * 6;
+            }
+
+            &--wrapper {
+                display: flex;
+                font-family: $font--inter--medium;
+                font-size: $base * 4;
+                margin-top: $base * 3;
+
+                @media all and (min-width: 1200px) {
+                    font-size: $base * 4.5;
+                }
+
+                & > span {
+                    margin-left: $base * 5;
+                    display: inline-block;
+                }
+            }
+        }
+
+        &__button {
+            text-align: center;
+
+            & > a {
+                color: $color--text;
+                font-family: $font--inter--semibold;
+                font-size: $base * 4;
+                background: $color--main;
+                display: flex;
+                border: $base * 0.5 solid $color--text;
+                justify-content: center;
+                align-items: center;
+                width: $base * 42;
+                height: $base * 14;
+                cursor: pointer;
+                border-radius: $base * 2;
+                transition: $transition * 2;
+                margin: $base * 5 auto;
+
+                @media all and (min-width: 1200px) {
+                    font-size: $base * 5;
+                    width: $base * 50;
+                    height: $base * 16;
+                    margin: $base * 6 auto;
+                }
+
+                &:hover {
+                    background: $color--text;
+                    border: $base * 0.5 solid $color--main;
+                    color: $color--main;
+                    transition: $transition * 2;
+                    box-shadow: 0 0 $base * 4 $color--main;
+                }
+            }
+        }
+    }
+}  

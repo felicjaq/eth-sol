@@ -1,0 +1,257 @@
+.main {
+    padding-top: $base * 20;
+    padding-bottom: $base * 8;
+    position: relative;
+    background: $color--text;
+
+    @media all and (min-width: 992px) {
+        padding-bottom: $base * 20;
+        background: $color--border;
+    }
+    
+    @media all and (min-width: 1200px) {
+        padding-bottom: $base * 25;
+        background: $color--border;
+    }
+
+    @media all and (min-width:1400px) {
+        padding-top: $base * 15;
+        padding-bottom: $base * 30;
+    }
+
+    &-inner {
+        position: relative;
+    }
+
+    &-title {
+        text-align: center;
+        font-family: $font--inter--bold;
+        font-size: $base * 4;
+        line-height: 1.45;
+
+        &__site {
+            background: $color--main;
+            padding: $base * 1.5;
+            border-radius: $base * 2;
+            color: $color--text;
+        }
+
+        @media all and (min-width: 768px){
+            font-size: $base * 5.5;
+        }
+
+        @media all and (min-width: 992px){
+            text-align: left;
+        }
+
+        @media all and (min-width: 1200px){
+            font-size: $base * 6;
+        }
+
+        @media all and (min-width: 1400px){
+            font-size: $base * 8;
+            padding-top: $base * 20;
+        }
+    }
+
+    &-subtitle {
+        text-align: center;
+        font-family: $font--inter--semibold;
+        font-size: $base * 4.5;
+        line-height: 1.25;
+
+        &__span {
+            border-bottom: $base * 0.5 solid $color--main;
+
+            @media all and (min-width: 1200px){
+                border-bottom: $base solid $color--main;
+            }
+        }
+
+        @media all and (min-width: 768px){
+            font-size: $base * 5;
+        }
+
+        @media all and (min-width: 992px){
+            text-align: left;
+        }
+
+        @media all and (min-width: 1200px){
+            font-size: $base * 6;
+        }
+
+        @media all and (min-width: 1400px){
+            font-size: $base * 7;
+        }
+
+        &__br {
+            display: none;
+
+            @media all and (min-width: 450px){
+                display: block;
+            }
+        }
+    }
+
+    &-buttons {
+        text-align: center;
+        font-family: $font--inter--semibold;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: $base * 7;
+
+        @media all and (min-width: 480px){
+            flex-direction: row;
+        }
+
+        @media all and (min-width: 992px){
+            justify-content: start;
+        }
+
+        @media all and (min-width: 1200px){
+            margin-top: $base * 10;
+        }
+
+        @media all and (min-width: 1400px){
+            margin-top: $base * 15;
+        }
+
+        &__first {
+            color: $color--text;
+            font-size: $base * 4;
+            background: $color--main;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: $base * 45;
+            height: $base * 13;
+            cursor: pointer;
+            border-radius: $base * 2;
+            transition: $transition * 2;
+
+            &:hover {
+                background: $color--text;
+                border: $base * 0.5 solid $color--main;
+                color: $color--main;
+                transition: $transition * 2;
+                box-shadow: 0 0 $base * 4 $color--main;
+            }
+
+            @media all and (min-width: 480px){
+                width: $base * 50;
+                height: $base * 15;
+                margin: 0 $base*3 0 0;
+            }
+
+            @media all and (min-width: 1400px){
+                width: $base * 65;
+                height: $base * 18;
+                font-size: $base * 5.5;
+                margin: 0 $base*6 0 0;
+            }
+        }
+
+        &__second {
+            color: $color--main;
+            font-size: $base * 4;
+            background: transparent;
+            border: $base * 0.5 solid $color--main;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: $base * 45;
+            height: $base * 13;
+            cursor: pointer;
+            border-radius: $base * 2;
+            transition: $transition * 2;
+            margin-top: $base * 5;
+
+            &:hover {
+                border: $base * 0.5 solid $color--text;
+                background: $color--main;
+                color: $color--text;
+                transition: $transition * 2;
+                box-shadow: 0 0 $base * 4 $color--main;
+            }
+
+            @media all and (min-width: 480px){
+                width: $base * 50;
+                height: $base * 15;
+                margin: 0 0 0 $base*3;
+            }
+
+            @media all and (min-width: 1400px){
+                width: $base * 65;
+                height: $base * 18;
+                font-size: $base * 5.5;
+                margin: 0 0 0 $base*6;
+            }
+        }
+    }
+
+    &-slogan {
+        text-align: center;
+        font-family: $font--lemon--regular;
+        color: $color--black;
+        font-size: $base * 5;
+        margin-top: $base * 7;
+        position: relative;
+
+        @media all and (min-width:992px){
+            text-align-last: left;
+            padding-left: $base * 10;
+            margin-top: $base * 10;
+            font-size: $base * 6;
+        }
+
+        @media all and (min-width:1200px){
+            font-size: $base * 6.5;
+        }
+
+        @media all and (min-width:1400px){
+            font-size: $base * 7;
+            padding-left: $base * 11;
+        }
+
+        & > span {
+            position: relative;
+            display: inline-block;
+
+            &:before {
+                content: '';
+                position: absolute;
+                background: $color--main;
+                width: $base * 3;
+                height: 100%;
+                left: -8%;
+            }
+        }
+    }
+
+    &-img {
+        display: none;
+        position: absolute;
+        right: $base * 2.5;
+        max-width: 100%;
+
+        @media all and (min-width: 992px) and (max-width: 1200px){
+            display: block;
+            width: $base * 70;
+            top: 0;
+        }
+
+        @media all and (min-width: 1200px) and (max-width: 1400px){
+            display: block;
+            width: $base * 80;
+            top: 0;
+        }
+
+        @media all and (min-width: 1400px) {
+            display: block;
+            width: $base * 100;
+            top: $base * 8;
+        }
+    }
+}

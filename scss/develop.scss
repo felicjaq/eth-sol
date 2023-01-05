@@ -1,0 +1,392 @@
+.develop {
+    color: $color--black; 
+    padding-bottom: $base * 10;
+    overflow-x: hidden;
+
+    @media all and (min-width: 1200px){
+        padding-bottom: $base * 15;
+    }
+
+    &-header {
+        clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
+        background: $color--border;
+        padding-top: $base * 10;
+        padding-bottom: $base * 17;
+
+        @media all and (min-width: 992px){
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            background: $color--text;
+        }
+    }
+
+    &-title {
+        text-align: center;
+        font-family: $font--inter--bold;
+        font-size: $base * 3.5;
+        line-height: 1.45;
+
+        &__site {
+            background: $color--main;
+            padding: $base * 1.5;
+            border-radius: $base * 2;
+            color: $color--text;
+        }
+
+        @media all and (min-width: 768px){
+            font-size: $base * 4.5;
+        }
+
+        @media all and (min-width: 1200px) {
+            font-size: $base * 5;
+        }
+    }
+
+    &-subtitle {
+        text-align: center;
+        font-family: $font--inter--medium;
+        font-size: $base * 3.5;
+
+        &__span {
+            border-bottom: $base * 0.5 solid $color--main;
+
+            @media all and (min-width: 1200px){
+                border-bottom: $base solid $color--main;
+            }
+        }
+
+        @media all and (min-width: 768px){
+            font-size: $base * 4.5;
+        }
+
+        @media all and (min-width: 1200px) {
+            font-size: $base * 5;
+        }
+    }
+
+    &-inner {
+        background: $color--main;
+        clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
+        transform: translateY(-12%);
+        padding-top: $base * 12;
+        padding-bottom: $base * 10;
+
+        @media all and (min-width: 992px){
+            clip-path: polygon(0% 0%, 60% 0%, 60% 100%, 0% 100%);
+            transform: translateY(0%);
+        }
+    }
+
+    &-content {
+
+        &__header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+
+            @media all and (min-width: 992px){
+               align-items: start;
+            }
+
+            & > span {
+                color: $color--text;
+                font-family: $font--inter--bold;
+                font-size: $base * 5;
+
+                @media all and (min-width: 768px){
+                    font-size: $base * 6;
+                }
+
+                @media all and (min-width: 1200px) {
+                    font-size: $base * 7;
+                }
+            }
+
+            & > hr {
+                border: $base * 0.25 solid $color--text;
+                width: 20%;
+                position: relative;
+                margin-top: $base * 5;
+
+                @media all and (min-width: 992px){
+                    margin-left: 0;
+                 }
+            }
+        }
+
+        &__text {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            padding-top: $base * 3;
+
+            @media all and (min-width: 992px){
+                align-items: start;
+                justify-content: start;
+                text-align: left;
+             }
+
+            & > p {
+                color: $color--text;
+                font-family: $font--inter--regular;
+                font-size: $base * 3.5;
+
+                @media all and (min-width: 768px){
+                    font-size: $base * 4;
+                }
+
+                @media all and (min-width: 1200px) {
+                    font-size: $base * 5;
+                }
+            }
+        }
+
+        &__button {
+            color: $color--text;
+            font-family: $font--inter--semibold;
+            font-size: $base * 4;
+            background: $color--main;
+            display: flex;
+            border: $base * 0.5 solid $color--text;
+            justify-content: center;
+            align-items: center;
+            width: $base * 42;
+            height: $base * 14;
+            cursor: pointer;
+            border-radius: $base * 2;
+            transition: $transition * 2;
+            margin: $base * 5 auto;
+            margin-bottom: 0;
+
+            &:hover {
+                background: $color--text;
+                border: $base * 0.5 solid $color--text;
+                color: $color--main;
+                transition: $transition * 2;
+                box-shadow: 0 0 $base * 4 $color--text;
+            }
+
+            @media all and (min-width: 992px){
+                margin: $base * 5 0;
+            }
+
+            @media all and (min-width: 1200px) {
+                font-size: $base * 5;
+                width: $base * 50;
+                height: $base * 15;
+            }
+        }
+    }
+
+    &-img {
+        display: none;
+        position: relative;
+
+        @media all and (min-width: 992px) {
+            display: block;
+        }
+
+        & > img {
+            width: $base * 95;
+            position: absolute;
+            right: 0;
+            transform: translate(-35%, -120%);
+
+            @media all and (min-width: 1200px) {
+                transform: translate(-50%, -124%);
+                width: $base * 100;
+            }
+
+            @media all and (min-width: 1400px) {
+                transform: translate(-50%, -117%);
+                width: $base * 110;
+            }
+
+            @media all and (min-width: 2500px) {
+                transform: translate(-40%, -117.5%);
+            }
+        }
+    }
+
+    &-analyse {
+        background: $color--text;
+        text-align: center;
+
+        &__img {
+            display: none;
+
+            @media all and (min-width: 992px) {
+                width: $base * 67;
+                position: absolute;
+                display: block;
+            }
+
+            @media all and (min-width: 1200px) {
+                width: $base * 76;
+                position: absolute;
+                display: block;
+            }
+
+            @media all and (min-width: 1400px) {
+                width: $base * 80;
+                position: absolute;
+                display: block;
+            }
+        }
+        
+        @media all and (min-width: 992px) {
+            margin-top: $base * 15;
+        }
+
+        &__wrapper {
+            
+            @media all and (min-width: 992px) {
+                margin-left: $base * 70;
+            }
+
+            @media all and (min-width: 1200px) {
+                margin-left: $base * 80;
+            }
+
+            @media all and (min-width: 1400px) {
+                margin-left: $base * 90;
+                margin-top: $base * 3;
+            }
+        }
+
+        &__header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            @media all and (min-width: 992px) {
+                align-items: flex-start;
+            }
+
+            & > span {
+                color: $color--black;
+                font-family: $font--inter--bold;
+                font-size: $base * 5.5;
+
+                @media all and (min-width: 768px){
+                    font-size: $base * 6;
+                }
+
+                @media all and (min-width: 1200px) {
+                    font-size: $base * 7;
+                }
+            }
+
+            & > hr {
+                border: $base * 0.25 solid $color--black;
+                width: 20%;
+                position: relative;
+                margin-top: $base * 5;
+
+                @media all and (min-width: 992px) {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        &__text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: $base * 3;
+
+            @media all and (min-width: 992px) {
+                text-align: left;
+            }
+
+            & > p {
+                color: $color--black;
+                font-family: $font--inter--regular;
+                font-size: $base * 3.5;
+
+                @media all and (min-width: 768px){
+                    font-size: $base * 4;
+                }
+
+                @media all and (min-width: 1200px) {
+                    font-size: $base * 5;
+                }
+            }
+        }
+
+        &__want {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: $base * 3 0 $base * 2 $base * 7;
+            text-align: center;
+
+            @media all and (min-width: 992px) {
+                justify-content: start;
+                padding: $base * 3 0 $base * 2 $base * 12;
+            }
+
+            & > span {
+                color: $color--black;
+                font-family: $font--inter--bold;
+                font-size: $base * 4;
+                position: relative;
+                display: inline-block;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    background: $color--main;
+                    width: $base * 3;
+                    height: 100%;
+                    left: -8%;
+                }
+
+                @media all and (min-width: 992px){
+                    font-size: $base * 5;
+                }
+            }
+        }
+
+        &__button {
+            color: $color--text;
+            font-family: $font--inter--semibold;
+            font-size: $base * 4;
+            background: $color--main;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: $base * 65;
+            height: $base * 15;
+            cursor: pointer;
+            border-radius: $base * 2;
+            transition: $transition * 2;
+            margin: $base * 6 auto;
+            margin-bottom: 0;
+
+            &:hover {
+                background: $color--text;
+                border: $base * 0.5 solid $color--main;
+                color: $color--main;
+                transition: $transition * 2;
+                box-shadow: 0 0 $base * 4 $color--main;
+            }
+
+            @media all and (min-width: 992px){
+                margin: $base * 5 0;
+            }
+
+            @media all and (min-width: 1200px) {
+                font-size: $base * 5;
+                width: $base * 80;
+                height: $base * 18;
+            }
+        }
+    }
+}

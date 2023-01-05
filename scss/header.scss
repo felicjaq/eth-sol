@@ -1,0 +1,275 @@
+.header {
+    background: $color--text;
+
+    @media all and (min-width:992px) {
+        background: $color--border;
+    }
+
+    &-logo {
+        display: flex;
+        align-items: center;
+        user-select: none;
+
+        & > a {
+            color: $color--black;
+            font-family: $font--lemon--regular;
+            font-size: $base * 5;
+
+            @media all and (min-width: 992px){
+                font-size: $base * 6;
+            }
+        }
+    }
+
+    &-inner {
+        height: $base * 20;
+
+        @media all and (min-width: 1200px){
+            height: $base * 22;
+        }
+
+        @media all and (min-width: 1400px){
+            height: $base * 25;
+        }
+    }
+
+    &-right {
+        display: none;
+        align-items: center;
+        justify-content: flex-end;
+
+        @media all and (min-width: 992px) {
+            display: flex;
+        }
+    }
+
+    &-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin-right: $base * 10;
+
+        @media all and (min-width: 1200px) {
+            margin-right: $base * 15;
+        }
+
+        @media all and (min-width: 1400px) {
+            margin-right: $base * 22;
+        }
+
+        &__item {
+            list-style: none;
+            margin-right: $base * 7;
+
+            @media all and (min-width: 1200px) {
+                margin-right: $base * 9;
+            }
+
+            @media all and (min-width: 1400px) {
+                margin-right: $base * 10;
+            }
+
+            &--link {
+                color: $color--link;
+                font-size: $base * 4;
+                font-family: $font--inter--medium;
+                transition: $transition;
+
+                @media all and (min-width: 1400px){
+                    font-size: $base * 4.5;
+                }
+
+                &:hover {
+                    color: $color--black;
+                    transition: $transition;
+                }
+
+                &-active {
+                    color: $color--black;
+                    font-family: $font--inter--semibold;
+                }
+            }
+        }
+    }
+
+    &-button {
+        color: $color--text;
+        font-family: $font--inter--semibold;
+        font-size: $base * 4;
+        background: $color--main;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $base * 42;
+        height: $base * 14;
+        cursor: pointer;
+        border-radius: $base * 2;
+        transition: $transition * 2;
+
+        @media all and (min-width: 1400px){
+            width: $base * 46;
+            height: $base * 15;
+            font-size: $base * 4.5;
+        }
+
+        @media all and (min-width: 1600px){
+            width: $base * 52;
+            height: $base * 16;
+            font-size: $base * 5;
+        }
+
+        &:hover {
+            background: $color--text;
+            border: $base * 0.5 solid $color--main;
+            color: $color--main;
+            box-shadow: 0 0 $base * 4 $color--main;
+            transition: $transition * 2;
+        }
+    }
+
+    &-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        height: 100%;
+        z-index: 100;
+
+        & > span {
+            background: $color--black;
+            width: $base * 8;
+            height: $base * 0.75;
+            transition: $transition * 2;
+            position: relative;
+        }
+
+        &__first {
+
+        }
+
+        &__first.active {
+            transform: rotate(45deg);
+            transition: $transition * 2;
+            position: absolute;
+        }
+
+        &__second {
+            margin-top: $base;
+        }
+
+        &__second.active {
+            opacity: 0;
+            margin: 0;
+            position: absolute;
+            transition: $transition;
+        }
+
+        &__third {
+            margin-top: $base;
+        }
+
+        &__third.active {
+            transform: rotate(-45deg);
+            margin: 0;
+            transition: $transition * 2;
+            position: absolute;
+        }
+
+        &__logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            user-select: none;
+            justify-content: center;
+            text-align: center;     
+            margin: $base * 5 0;
+    
+            & > span {
+                text-align: center;
+                color: $color--black;
+                font-family: $font--inter--medium;
+                font-size: $base * 3.5;
+                margin-top: $base * 5;
+                line-height: 1.45;
+            }
+    
+            & > a {
+                color: $color--black;
+                font-family: $font--lemon--regular;
+                font-size: $base * 5.5;
+            }
+        }
+
+        @media all and (min-width: 992px) {
+            display: none;
+        }
+    }
+
+    &-hr {
+        border: $base * 0.25 solid $color--main;
+        width: 60%;
+
+        @media all and (min-width: 576px) {
+            width: 30%;
+        }
+    }
+
+    &-menu {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: -100vh;
+        height: 100vh;
+        width: 100vw;
+        z-index: 10;
+        background: $color--text;
+        display: flex;
+        flex-direction: column;
+        transition: 1s;
+        opacity: 0;
+
+        & > ul {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: $base * 5;
+        }
+    
+        &__item {
+            list-style: none;
+            margin-top: $base * 7;
+
+            &--link {
+                color: $color--black;
+                font-family: $font--inter--bold;
+                font-size: $base * 5;
+
+                @media all and (min-width: 768px) {
+                    font-size: $base * 6;
+                }
+
+                &-active {
+                    color: $color--main;
+                    font-family: $font--inter--extrabold;
+                }
+            }
+        }
+    }
+
+    &-menu.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 30;
+        opacity: 1;
+        transition: 1s;
+    }
+}

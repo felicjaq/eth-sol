@@ -1,0 +1,165 @@
+.why {
+    background: $color--black;
+    color: $color--border;
+    padding-top: $base * 5;
+    overflow-x: hidden;
+    padding-bottom: $base * 10;
+
+    @media all and (min-width:1200px) {
+        padding-bottom: $base * 13;
+    }
+
+    @media all and (min-width:1400px) {
+        padding-bottom: $base * 15;
+    }
+
+    &-container {
+
+        @media all and (min-width:1200px) {
+            max-width: 1200px;
+        }
+
+        @media all and (min-width:1400px) {
+            max-width: 1400px;
+        }
+
+        @media all and (min-width:1600px) {
+            max-width: 1600px;
+        }
+    }
+
+    @media all and (min-width: 1200px) {
+        padding-top: $base * 10;
+    }
+
+    &-title {
+        text-align: center;
+        font-family: $font--inter--bold;
+        font-size: $base * 4.5;
+        line-height: 1.6;
+        color: $color--text;
+
+        @media all and (min-width: 768px){
+            font-size: $base * 5.8;
+        }
+
+        @media all and (min-width: 1200px) {
+            font-size: $base * 6.5;
+        }
+
+        &__site {
+            background: $color--main;
+            padding: $base * 1.5;
+            border-radius: $base * 2;
+            color: $color--text;
+        }
+    }
+
+    &-subtitle {
+        text-align: center;
+        font-family: $font--inter--medium;
+        font-size: $base * 3.5;
+        color: $color--text;
+        padding-bottom: $base * 5;
+
+        &__span {
+            border-bottom: $base * 0.5 solid $color--main;
+
+            @media all and (min-width: 1200px){
+                border-bottom: $base solid $color--main;
+            }
+        }
+
+        @media all and (min-width: 768px){
+            font-size: $base * 4.5;
+        }
+
+        @media all and (min-width: 1200px) {
+            font-size: $base * 5;
+        }
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        margin-top: $base * 7;
+        justify-content: center;
+        align-items: center;
+
+        @media all and (min-width: 1200px) {
+            margin-top: $base * 15;
+        }
+
+        &__logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: $base * 2;
+
+            & > img {
+                width: $base * 14;
+
+                @media all and (min-width: 992px) {
+                    width: $base * 16;
+                }
+            }
+        }
+
+        &__name {
+            font-family: $font--inter--bold;
+            font-size: $base * 5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media all and (min-width: 992px) {
+                font-size: $base * 6;
+            }
+
+            @media all and (min-width: 1200px) {
+                font-size: $base * 5;
+            }   
+
+            @media all and (min-width: 1400px) {
+                font-size: $base * 6;
+            } 
+        }
+
+        &__text {
+            font-family: $font--lemon--regular;
+            text-align: center;
+            font-size: $base * 3.5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: $base * 70;
+            height: auto;
+
+            @media all and (min-width: 768px) {
+                width: $base * 75;
+                padding: 0 $base * 7.5;
+            }
+
+            @media all and (min-width: 992px) {
+                font-size: $base * 4;
+                width: $base * 85;
+            }
+
+            @media all and (min-width: 1200px) {
+                width: auto;
+                font-size: $base * 3.5;
+                padding: 0 $base * 4.5;
+            } 
+            
+            @media all and (min-width: 1400px) {
+                font-size: $base * 4.5;
+                padding: 0 $base * 5.5;
+            } 
+
+            @media all and (min-width: 1600px) {
+                font-size: $base * 4.5;
+                padding: 0 $base * 10;
+            } 
+        }
+    }
+}

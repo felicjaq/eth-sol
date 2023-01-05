@@ -1,0 +1,77 @@
+.footer {
+    background: $color--black;
+    padding-top: $base * 10;
+    padding-bottom: $base * 10;
+
+    &-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        user-select: none;
+        justify-content: center;
+        text-align: center;
+
+        @media all and (min-width: 992px) {
+            text-align: left;
+            align-items: start;
+        }
+
+        & > span {
+            text-align: center;
+            color: $color--text;
+            font-family: $font--inter--regular;
+            font-size: $base * 3.5;
+            margin-top: $base * 5;
+            line-height: 1.45;
+
+            @media all and (min-width: 992px) {
+                text-align: left;
+            }
+
+            @media all and (min-width: 1400px) {
+                font-size: $base * 4.5;
+            }
+        }
+
+        & > a {
+            color: $color--text;
+            font-family: $font--lemon--regular;
+            font-size: $base * 6;
+
+            @media all and (min-width: 992px){
+                font-size: $base * 6;
+            }
+        }
+    }
+
+    &-links {
+        display: none;
+        line-height: 1.45;
+
+        @media all and (min-width: 992px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $font--inter--regular;
+            font-size: $base * 4;
+            color: $color--text;
+
+            & > ul {
+                padding: 0;
+
+                & > li {
+                    list-style: none;
+                
+                    & > a {
+                        color: $color--text;
+                    }
+                }
+            }
+        }
+
+        @media all and (min-width: 1400px) {
+            font-size: $base * 5;
+            line-height: 1.4;
+        }
+    }
+}
